@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #ffffff;
+  --color-brand-accent: #f27d26;
+  --color-bg-dark: #000000;
+  --color-bg-subtle: #121212;
+  --color-text-dim: rgba(255, 255, 255, 0.6);
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white antialiased font-sans overflow-hidden;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.glass-morphism {
+  @apply backdrop-blur-xl bg-white/10 border border-white/10;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom slider for comparison */
+.compare-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.compare-handle {
+  width: 2px;
+  background: white;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.compare-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  cursor: ew-resize;
+  pointer-events: auto;
+  z-index: 11;
+}
+

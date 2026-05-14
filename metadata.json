@@ -1,0 +1,13 @@
+{
+  "name": "AI Photo Pro",
+  "description": "A modern AI-powered photo editing app with minimalist design, smart enhancements, and stylistic filters.",
+  "requestFramePermissions": [
+    "camera",
+    "web-share"
+  ],
+  "majorCapabilities": [
+    "AI Image Processing",
+    "Real-time Filters",
+    "Minimalist UI"
+  ]
+}
